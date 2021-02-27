@@ -11,10 +11,11 @@ In project [`Settings`](https://github.com/wizjin/schedule-actions/settings), ne
 
 Set secrets:
 
-| Name             | Value              |
-| ---------------- | ------------------ |
-| WEATHER_LOCATION | Weatcher location  |
-| CHANIFY_TOKEN    | Chanify push token |
+| Name             | Value                   |
+| ---------------- | ----------------------- |
+| WEATHER_LOCATION | Weatcher location       |
+| CHANIFY_TOKEN    | Chanify push token      |
+| TIMEZONE         | Set timezone (optional) |
 
 ## Acknowledgements
 
