@@ -1,0 +1,8 @@
+name: schedule
+on:
+  push:
+jobs:
+  weather:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo $(date +"%Y/%m/%d"): $(curl -s "http://wttr.in/${{ secrets.WEATHER_LOCATION }}?format=%c+%t+%w\n") | curl -s -X POST -H "Content-Type:text/plain" --data-binary @- "https://api.chanify.net/v1/sender/${{ secrets.CHANIFY_TOKEN }}"
