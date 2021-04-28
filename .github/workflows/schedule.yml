@@ -9,4 +9,4 @@ jobs:
     env:
       TZ: ${{ secrets.TIMEZONE }}
     steps:
-    - run: echo "$(date +"%Y/%m/%d"):" $(curl -s "http://wttr.in/${{ secrets.WEATHER_LOCATION }}?m&format=%c+%t+%w\n") | curl -s -X POST -H "Content-Type:text/plain" --data-binary @- "https://api.chanify.net/v1/sender/${{ secrets.CHANIFY_TOKEN }}"
+    - run: echo "$(date +"%Y/%m/%d"):" $(curl -s "http://wttr.in/${{ secrets.WEATHER_LOCATION }}?m&format=%c+%t+%w\n") | curl -s -X POST -H "Content-Type:text/plain" --data-binary @- "https://api.chanify.net/v1/sender/${{ secrets.CHANIFY_TOKEN }}?sound=1"
